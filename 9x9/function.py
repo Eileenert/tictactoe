@@ -52,11 +52,7 @@ def is_a_board_finished(board, player):
 
                     
         counter += 1
-        
-        
-
-
- 
+                
 
 
 
@@ -76,7 +72,6 @@ def is_a_board_finished(board, player):
     if board[2] == board[4] == board[6] == sign or board[0] == board[4] == board[8] == sign:
         is_complete_game_finished = True
         
-    
     
 
     return board, is_complete_game_finished

@@ -13,7 +13,7 @@ class Interface(tk.Frame):
         self.master.title("3x3")
         self.master.geometry('394x430')
         self.master.configure(bg=d.background_color)
-
+        
         self.grid(sticky="")
 
         self.player = 1

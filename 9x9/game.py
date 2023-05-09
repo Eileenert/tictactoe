@@ -7,7 +7,7 @@ class Interface(tk.Frame):
     """main interface"""
 
     def __init__(self, **kwargs):
-        tk.Frame.__init__(self, **kwargs, background="#000000")
+        tk.Frame.__init__(self, **kwargs, background=d.background_color) #initiates the frame
 
         # design
         self.master.title("9x9")
@@ -25,8 +25,8 @@ class Interface(tk.Frame):
 
     def init_grid(self):
         """initialization of 2 empty 9x9 grid (one with buttons and another with 0)
-        we save the variable of each small box in one_board (all the variables of one big cell)
-        and then we save one_board in  self.grid_cells
+        we save the variable of each small box in one_board and then we save all the one_board in board.
+        we save the buttons of each small box in one_cell and then we save all the one_cell in grid_cells.
 
         we'll have something like this :
         [[button0, button1, button2,         [button9, button10, button11,        [button18, button19, button20,
@@ -168,7 +168,7 @@ class Interface(tk.Frame):
                     i += 1
       
 
-            #ICI JE DOIS GRISER LES CASES EN CAS DE MATCH NUL
+            #Here I must gray the boxes in case of a draw match
             elif item == "G":
                 for btn in self.grid_cells[counter]:
                      btn.configure(bg="#d9d9d9", relief="flat", state="disabled", command=0)
